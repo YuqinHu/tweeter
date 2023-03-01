@@ -28,7 +28,8 @@ body {
 
 body main {
   width: 90%;
-  background-color: #9aa0ed;
+  background-color: #f4f1ec;
+  display: flex;
 }
 
 /*
