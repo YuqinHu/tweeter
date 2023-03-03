@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  const escape = function (str) {
+//preventing XSS with escaping    
+const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -17,7 +18,7 @@ $(document).ready(function() {
   }
 
 
-
+  //Fetching tweets with Ajax
   const createTweetElement = function(tweet) {
     let $tweet = `
     <article class = "tweet">
