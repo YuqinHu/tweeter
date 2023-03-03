@@ -35,7 +35,10 @@ $(document).ready(function() {
   }
 
 
+  // ${$.timeago(tweet.created_at)}
+
   const createTweetElement = function(tweet) {
+    // $("time.timeago").timeago();
     let $tweet = `
     <article class = "tweet">
     <header>
@@ -51,7 +54,9 @@ $(document).ready(function() {
       <p class="user-post">${tweet.content.text}</p>
     </body>
     <footer>
-      <div>${tweet.created_at}</div>
+      <div>
+      ${timeago.format(tweet.created_at)}
+      </div>
       <div>
         <i class="fa-solid fa-flag"></i>
         <i class="fa-solid fa-retweet"></i>
@@ -70,11 +75,17 @@ $(document).ready(function() {
     const tweetData = $('#tweet-text').val();
     const serializeTweet = $(this).serialize();
     $.post('http://localhost:8080/tweets', serializeTweet, (result) => {
-      console.log(tweetData);
     });
   });
 
-  renderTweets(data);
+  const loadTweets = () => {
+    $.get('http://localhost:8080/tweets', (data) => {
+      renderTweets(data);
+    });
+  };
+
+  loadTweets();
+  // renderTweets(data);
   });
 
 
