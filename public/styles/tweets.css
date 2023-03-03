@@ -1,3 +1,4 @@
+/* Tablets */
 .tweets-container {
   width: 80%;
 }
@@ -65,3 +66,5 @@ article.tweet footer {
 article.tweet i:hover {
   color: #ab2222;
 }
+
+

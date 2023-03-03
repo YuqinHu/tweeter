@@ -1,3 +1,4 @@
+/* Tablets */
 header {
   width: 100%;
   height: 400px;
@@ -8,4 +9,35 @@ header {
   margin-top: 120px;
   background-color: #9aa0ed;
   background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");
+}
+
+header h2 {
+  color: white;
+}
+
+
+header img {
+  max-width: 60%;
+}
+
+header div {
+  display: flex;
+  justify-content: center;
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+  header {
+    width: 50%;
+    margin-top: 220px;
+    margin-left: 30px;
+  }
+
+  header img {
+    margin-top: 25px;
+  }
+
+  header h2 {
+    margin-bottom: 45px;
+  }
 }
