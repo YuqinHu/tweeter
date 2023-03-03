@@ -54,9 +54,9 @@ $(document).ready(function() {
     event.preventDefault();
     const tweetData = $('#tweet-text').val();
     if (tweetData.length === 0) {
-      alert("Please enter a message to tweet.");
+      $(".error").text("Please enter a message to tweet.");
     } else if (tweetData.length > 140) {
-      alert("Your tweet is too long. Please shorten your message to 140 characters.");
+      $(".error").text("Your tweet is too long. Please shorten your message to 140 characters.");
     } else {
       const serializeTweet = $(this).serialize();
       $.post('http://localhost:8080/tweets', serializeTweet, (result) => {

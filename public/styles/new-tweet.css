@@ -5,10 +5,18 @@
   align-items: center;
 }
 
+.error {
+  color: red;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.error {
+  margin-top: 20px;
 }
 
 button {
@@ -33,6 +41,7 @@ form {
 }
 
 textarea {
+  margin-top: 40px;
   width: 100%;
   border: none;
   border-bottom: solid black;
