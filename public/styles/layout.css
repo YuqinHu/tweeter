@@ -33,6 +33,7 @@ body main {
   flex-direction: column;
 }
 
+/* Tablet */
 @media only screen and (min-width: 1024px) {
   body {
     display: flex;
