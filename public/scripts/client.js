@@ -35,10 +35,8 @@ $(document).ready(function() {
   }
 
 
-  // ${$.timeago(tweet.created_at)}
 
   const createTweetElement = function(tweet) {
-    // $("time.timeago").timeago();
     let $tweet = `
     <article class = "tweet">
     <header>
@@ -73,9 +71,15 @@ $(document).ready(function() {
   $('.form').submit(function(event) {
     event.preventDefault();
     const tweetData = $('#tweet-text').val();
-    const serializeTweet = $(this).serialize();
-    $.post('http://localhost:8080/tweets', serializeTweet, (result) => {
-    });
+    if (tweetData.length === 0) {
+      alert("Please enter a message to tweet.");
+    } else if (tweetData.length > 140) {
+      alert("Your tweet is too long. Please shorten your message to 140 characters.");
+    } else {
+      const serializeTweet = $(this).serialize();
+      $.post('http://localhost:8080/tweets', serializeTweet, (result) => {
+      });
+    }
   });
 
   const loadTweets = () => {
