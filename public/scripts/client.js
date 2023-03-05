@@ -61,6 +61,8 @@ const escape = function (str) {
     } else {
       const serializeTweet = $(this).serialize();
       $.post('http://localhost:8080/tweets', serializeTweet, (result) => {
+        $("textarea").val("");
+        $(".counter").text(140);
         loadTweets();
       });
     }
@@ -68,7 +70,6 @@ const escape = function (str) {
 
   const loadTweets = () => {
     $.get('http://localhost:8080/tweets', (data) => {
-      console.log(data);
       renderTweets(data);
     });
   };
