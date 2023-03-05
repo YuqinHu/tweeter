@@ -7,9 +7,10 @@ This repository is the starter code for the project: Students will fork and clon
 ## Final Product
 
 ### Desktop vesion
-!["Screenshot of URLs page"](https://github.com/YuqinHu/tweeter/blob/master/screenshot/Url_page.png)
+!["Screenshot of desktop page"](https://github.com/YuqinHu/tweeter/blob/master/public/images/desktop.png)
 ### Tablet vesion
-!["Screenshot of register page"](https://github.com/YuqinHu/tweeter/blob/master/screenshot/register.png)
+!["Screenshot of tablet page"](https://github.com/YuqinHu/tweeter/blob/master/public/images/tablet1.png)
+!["Screenshot of tablet page"](https://github.com/YuqinHu/tweeter/blob/master/public/images/tablet2.png)
 
 ## Getting Started
 
